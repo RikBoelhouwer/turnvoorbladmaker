@@ -1,0 +1,13 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#183b56"><title>DOS Voorblad-generator</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><div><strong>DOS</strong> <span>Voorblad-generator</span></div><small>Gratis • Geen account nodig</small></header>
+<main class="app"><section class="controls"><h1>Maak je document</h1><p class="muted">Vul de gegevens in en bekijk het resultaat.</p>
+<fieldset class="mode"><legend>Paginatype</legend><label><input type="radio" name="type" value="cover" checked> Voorblad</label><label><input type="radio" name="type" value="text"> Tekstpagina</label></fieldset>
+<label class="field">Categorie<select id="category"><option>Turnen</option><option>Urban Gymnastics</option><option>Rhönrad</option><option>Dansen</option><option>Acro</option></select></label>
+<label class="field">Niveau<input id="level" value="Jeugd D" maxlength="80"></label>
+<label class="field">Soort blad<input id="kind" value="Oefenbladen" maxlength="100"></label>
+<div class="field"><span>Afbeelding op voorblad</span><div class="logos"><label><input type="radio" name="logo" value="dos" checked><img src="logo-dos.png" alt="DOS-logo"><span>DOS</span></label><label><input type="radio" name="logo" value="urban"><img src="logo-urban.png" alt="Urban Gymnastics-logo"><span>Urban Gymnastics</span></label></div></div>
+<label class="field">Beschrijving / tekstinhoud<textarea id="description" rows="9" placeholder="Typ of plak hier je tekst">Oefenstof en turnvaardigheden</textarea></label>
+<div id="imageTools" hidden><label class="upload">＋ Afbeelding toevoegen<input id="imageUpload" type="file" accept="image/*" multiple hidden></label><div id="imageList" class="image-list"></div><p class="hint">Afbeeldingen komen na de tekst in de PDF.</p></div>
+<button class="primary" id="pdfButton">Maak PDF</button><p class="hint">Kies in het afdrukvenster ‘Bewaar als PDF’. Op iPhone: gebruik ‘Deel’ en ‘Bewaar in Bestanden’ vanuit het afdrukvoorbeeld.</p></section>
+<section class="preview"><div class="preview-head"><h2>Voorbeeld</h2><div class="page-nav"><button id="prev" aria-label="Vorige pagina">◀</button><span id="pageCount">Pagina 1 / 1</span><button id="next" aria-label="Volgende pagina">▶</button></div></div><div id="previewMount"></div></section></main>
+<div id="printMount" aria-hidden="true"></div><script src="app.js"></script></body></html>
